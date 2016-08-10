@@ -7,7 +7,6 @@
 	"command": "minetest",
 	"rename-desktop-file": "minetest.desktop",
 	"rename-icon": "minetest",
-	"writable-sdk": true,
 	"finish-args": [
 		"--socket=x11",
 		"--socket=pulseaudio",

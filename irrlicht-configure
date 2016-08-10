@@ -22,7 +22,8 @@ cat <<EOF >> Makefile
 all:
 	\$(MAKE) -C source/Irrlicht
 install:
-	cp lib/Linux/libIrrlicht.a \$(DESTDIR)/$libdir
-	mkdir \$(DESTDIR)/usr/include/irrlicht
-	cp -R include/* \$(DESTDIR)/usr/include/irrlicht/
+	mkdir -p $prefix/$libdir
+	cp lib/Linux/libIrrlicht.a $prefix/$libdir
+	mkdir -p $prefix/include/irrlicht
+	cp -R include/* $prefix/include/irrlicht/
 EOF

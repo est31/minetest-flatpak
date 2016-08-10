@@ -19,7 +19,7 @@ for p in "$@"; do
 done
 
 cmake \
-	-DIRRLICHT_LIBRARY=$libdir/libIrrlicht.a -DIRRLICHT_INCLUDE_DIR=/usr/include/irrlicht \
+	-DIRRLICHT_LIBRARY=$prefix/$libdir/libIrrlicht.a -DIRRLICHT_INCLUDE_DIR=$prefix/include/irrlicht \
 	-DENABLE_CURSES=0 \
 	-DCMAKE_INSTALL_PREFIX=$prefix \
 	-DLUA_INCLUDE_DIR=$prefix/include/luajit-2.0 \
