@@ -11,6 +11,7 @@
 		"--socket=x11",
 		"--socket=pulseaudio",
 		"--device=dri",
+		"--filesystem=~/.minetest",
 		"--share=network"
 	],
 	"cleanup": [
@@ -92,10 +93,6 @@
 					"url": "https://github.com/minetest/minetest_game/archive/0.4.14.tar.gz",
 					"sha256": "eebc2830d0e2f431f648691a0072fbb773d000c56deaf09ddc5e7416096cdf85",
 					"dest": "games/minetest_game"
-				},
-				{
-					"type": "patch",
-					"path": "minetest-xdg-data-dir.patch"
 				}
 			]
 		}
