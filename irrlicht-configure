@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "IRRLICHT CONFIGURE"
-
 libdir="/lib"
 prefix=""
 
