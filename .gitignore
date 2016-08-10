@@ -1,0 +1,5 @@
+# Ignore build artifacts
+build/
+.flatpak-builder/
+# Ignore temp files
+*swp

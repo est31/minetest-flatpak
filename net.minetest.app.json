@@ -1,0 +1,62 @@
+{
+	"id": "net.minetest.app",
+	"version": "0.4.14",
+	"runtime": "org.freedesktop.Platform",
+	"runtime-version": "1.4",
+	"sdk": "org.freedesktop.Sdk",
+	"command": "minetest",
+	"rename-desktop-file": "minetest.desktop",
+	"rename-icon": "minetest",
+	"writable-sdk": true,
+	"finish-args": [
+		"--socket=x11",
+		"--socket=pulseaudio",
+		"--device=dri",
+		"--share=network"
+	],
+	"cleanup": [
+		"/include",
+		"/lib/pkgconfig",
+		"/lib/*.la",
+		"/share/aclocal"
+	],
+	"modules": [
+		{
+			"name": "libirrlicht",
+			"sources": [
+				{
+					"type": "archive",
+					"url": "http://downloads.sourceforge.net/irrlicht/irrlicht-1.8.4.zip",
+					"sha256": "f42b280bc608e545b820206fe2a999c55f290de5c7509a02bdbeeccc1bf9e433"
+				},
+				{
+					"type": "file",
+					"path": "irrlicht-configure",
+					"dest-filename": "configure"
+				}
+			]
+		},
+		{
+			"name": "minetest",
+			"sources": [
+				{
+					"type": "archive",
+					"url": "https://github.com/minetest/minetest/archive/0.4.14.tar.gz",
+					"sha256": "203de4d41a60466126ab92ca85f726d88d0084f2e78393da239e7416cb847054"
+				},
+				{
+					"type": "file",
+					"path": "minetest-configure",
+					"dest-filename": "configure"
+				},
+				{
+					"type": "archive",
+					"url": "https://github.com/minetest/minetest_game/archive/0.4.14.tar.gz",
+					"sha256": "eebc2830d0e2f431f648691a0072fbb773d000c56deaf09ddc5e7416096cdf85",
+					"dest": "games/minetest_game"
+				}
+			]
+		}
+	]
+}
+

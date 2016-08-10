@@ -1,0 +1,25 @@
+#!/bin/bash
+
+echo "MINETEST CONFIGURE"
+
+libdir="/lib"
+prefix=""
+
+for p in "$@"; do
+	case $p in
+		--prefix=*)
+		prefix="${p#*=}"
+		shift
+		;;
+		--libdir=*)
+		libdir="${p#*=}"
+		shift
+		;;
+	esac
+done
+
+cmake \
+	-DIRRLICHT_LIBRARY=$libdir/libIrrlicht.a -DIRRLICHT_INCLUDE_DIR=/usr/include/irrlicht \
+	-DENABLE_SOUND=0 \
+	-DCMAKE_INSTALL_PREFIX=$prefix \
+	.

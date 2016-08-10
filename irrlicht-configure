@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo "IRRLICHT CONFIGURE"
+
+libdir="/lib"
+prefix=""
+
+for p in "$@"; do
+	case $p in
+		--prefix=*)
+		prefix="${p#*=}"
+		shift
+		;;
+		--libdir=*)
+		libdir="${p#*=}"
+		shift
+		;;
+	esac
+done
+
+cat <<EOF >> Makefile
+all:
+	\$(MAKE) -C source/Irrlicht
+install:
+	cp lib/Linux/libIrrlicht.a \$(DESTDIR)/$libdir
+	mkdir \$(DESTDIR)/usr/include/irrlicht
+	cp -R include/* \$(DESTDIR)/usr/include/irrlicht/
+EOF
