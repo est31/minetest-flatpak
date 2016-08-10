@@ -17,6 +17,7 @@
 		"/include",
 		"/lib/pkgconfig",
 		"/lib/*.la",
+		"/lib/*.a",
 		"/share/aclocal"
 	],
 	"modules": [
