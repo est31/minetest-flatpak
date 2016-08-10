@@ -1,0 +1,17 @@
+#!/bin/bash
+
+for p in "$@"; do
+	case $p in
+		--prefix=*)
+		prefix="${p#*=}"
+		shift
+		;;
+		--libdir=*)
+		libdir="${p#*=}"
+		shift
+		;;
+	esac
+done
+
+sed -i "s,\(PREFIX=\).*$,\1$prefix," Makefile
+
