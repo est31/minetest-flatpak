@@ -33,6 +33,14 @@
 					"type": "file",
 					"path": "irrlicht-configure",
 					"dest-filename": "configure"
+				},
+				{
+					"type": "patch",
+					"path": "irrlicht-use-system-libs.diff"
+				},
+				{
+					"type": "patch",
+					"path": "irrlicht-link-against-needed-libs.diff"
 				}
 			]
 		},
