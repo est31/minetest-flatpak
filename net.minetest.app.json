@@ -52,6 +52,21 @@
 			]
 		},
 		{
+			"name": "libopenal-soft",
+			"sources": [
+				{
+					"type": "archive",
+					"url": "https://github.com/kcat/openal-soft/archive/openal-soft-1.17.2.tar.gz",
+					"sha256": "11ea176f6cbf9763dbce0953dd77ab72d032b4ad95f07afffb91844abb174033"
+				},
+				{
+					"type": "file",
+					"path": "openal-soft-configure",
+					"dest-filename": "configure"
+				}
+			]
+		},
+		{
 			"name": "minetest",
 			"sources": [
 				{

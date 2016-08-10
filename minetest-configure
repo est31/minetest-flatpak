@@ -20,7 +20,6 @@ done
 
 cmake \
 	-DIRRLICHT_LIBRARY=$libdir/libIrrlicht.a -DIRRLICHT_INCLUDE_DIR=/usr/include/irrlicht \
-	-DENABLE_SOUND=0 \
 	-DENABLE_CURSES=0 \
 	-DCMAKE_INSTALL_PREFIX=$prefix \
 	-DLUA_INCLUDE_DIR=$prefix/include/luajit-2.0 \
