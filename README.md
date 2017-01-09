@@ -15,7 +15,7 @@ flatpak --user install gnome org.freedesktop.Platform 1.4
 Then, install the bundle file like:
 
 ```
-wget https://github.com/est31/minetest-flatpak/releases/download/v1.0/Minetest-0.4.15.flatpak
+wget https://github.com/est31/minetest-flatpak/releases/download/v2.0/Minetest-0.4.15.flatpak
 flatpak install --user --bundle Minetest-0.4.15.flatpak
 ```
 
