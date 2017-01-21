@@ -1,6 +1,6 @@
 {
 	"id": "net.minetest.app",
-	"version": "0.4.14",
+	"version": "0.4.15",
 	"runtime": "org.freedesktop.Platform",
 	"runtime-version": "1.4",
 	"sdk": "org.freedesktop.Sdk",
