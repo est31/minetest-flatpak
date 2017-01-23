@@ -21,7 +21,7 @@ flatpak install --user --bundle Minetest-0.4.15.flatpak
 
 You can then invoke `flatpak run net.minetest.app` to run the build.
 
-## Build it yourself
+## Build it yourself (Stable minetest)
 
 Similar to above, the first step is to get the Freedesktop platform
 (and the SDK) version 1.4:
@@ -53,6 +53,41 @@ Or you can extract the app from the repo and create a bundle file `Minetest-0.4.
 
 ```
 flatpak build-bundle repo Minetest-0.4.15.flatpak net.minetest.app
+
+```
+
+## Build it yourself (latest minetest from git)
+
+Similar to above, the first step is to get the Freedesktop platform
+(and the SDK) version 1.4:
+
+
+```
+wget https://sdk.gnome.org/keys/gnome-sdk.gpg
+flatpak remote-add --user --gpg-import=gnome-sdk.gpg gnome https://sdk.gnome.org/repo/
+flatpak --user install gnome org.freedesktop.Platform 1.4
+flatpak --user install gnome org.freedesktop.Sdk 1.4
+
+```
+
+Then, clone `minetest-flatpak`, and build it:
+
+```
+git clone https://github.com/est31/minetest-flatpak
+flatpak-builder minetest-flatpak/build --repo repo minetest-flatpak/net.minetest.app.git.json
+```
+It will create a new repo in the `repo` directory (or use an existing one if `repo` already contains a flatpak repo), and put the built result inside.
+
+If you want, you can install the app to try it:
+
+```
+flatpak --user install repo net.minetest.app.git
+```
+
+Or you can extract the app from the repo and create a bundle file `Minetest-git.flatpak`:
+
+```
+flatpak build-bundle repo Minetest-git.flatpak net.minetest.app.git
 
 ```
 
