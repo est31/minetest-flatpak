@@ -1,0 +1,100 @@
+{
+	"id": "net.minetest.app.git",
+	"version": "master",
+	"runtime": "org.freedesktop.Platform",
+	"runtime-version": "1.4",
+	"sdk": "org.freedesktop.Sdk",
+	"command": "minetest",
+	"rename-desktop-file": "minetest.desktop",
+	"desktop-file-name-suffix": " (git)",
+	"rename-icon": "minetest",
+	"finish-args": [
+		"--socket=x11",
+		"--socket=pulseaudio",
+		"--device=dri",
+		"--filesystem=~/.minetest",
+		"--share=network"
+	],
+	"cleanup": [
+		"/include",
+		"/lib/pkgconfig",
+		"/lib/*.la",
+		"/lib/*.a",
+		"/share/aclocal"
+	],
+	"modules": [
+		{
+			"name": "libirrlicht",
+			"sources": [
+				{
+					"type": "archive",
+					"url": "http://downloads.sourceforge.net/irrlicht/irrlicht-1.8.4.zip",
+					"sha256": "f42b280bc608e545b820206fe2a999c55f290de5c7509a02bdbeeccc1bf9e433"
+				},
+				{
+					"type": "file",
+					"path": "irrlicht-configure",
+					"dest-filename": "configure"
+				},
+				{
+					"type": "patch",
+					"path": "irrlicht-use-system-libs.diff"
+				},
+				{
+					"type": "patch",
+					"path": "irrlicht-link-against-needed-libs.diff"
+				}
+			]
+		},
+		{
+			"name": "libluajit",
+			"sources": [
+				{
+					"type": "archive",
+					"url": "http://luajit.org/download/LuaJIT-2.0.4.tar.gz",
+					"sha256": "620fa4eb12375021bef6e4f237cbd2dd5d49e56beb414bee052c746beef1807d"
+				},
+				{
+					"type": "file",
+					"path": "luajit-configure",
+					"dest-filename": "configure"
+				}
+			]
+		},
+		{
+			"name": "libopenal-soft",
+			"sources": [
+				{
+					"type": "archive",
+					"url": "https://github.com/kcat/openal-soft/archive/openal-soft-1.17.2.tar.gz",
+					"sha256": "11ea176f6cbf9763dbce0953dd77ab72d032b4ad95f07afffb91844abb174033"
+				},
+				{
+					"type": "file",
+					"path": "openal-soft-configure",
+					"dest-filename": "configure"
+				}
+			]
+		},
+		{
+			"name": "minetest",
+			"sources": [
+				{
+					"type": "git",
+					"url": "https://github.com/minetest/minetest.git"
+				},
+				{
+					"type": "file",
+					"path": "minetest-configure",
+					"dest-filename": "configure"
+				},
+				{
+					"type": "git",
+					"url": "https://github.com/minetest/minetest_game.git",
+					"dest": "games/minetest_game"
+				}
+			]
+		}
+	]
+}
+
