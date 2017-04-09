@@ -1,0 +1,10 @@
+all:
+	rm -rf minetest-git
+	flatpak-builder --repo=repo --ccache minetest-git net.minetest.app.git.json
+	flatpak build-bundle repo Minetest-master.flatpak net.minetest.app.git
+clean:
+	rm -rf build repo minetest-git *.flatpak .flatpak-builder
+install:
+	flatpak install --user --bundle Minetest-master.flatpak
+uninstall:
+	flatpak uninstall --user net.minetest.app.git
