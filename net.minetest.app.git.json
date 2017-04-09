@@ -5,9 +5,10 @@
 	"runtime-version": "1.4",
 	"sdk": "org.freedesktop.Sdk",
 	"command": "minetest",
-	"rename-desktop-file": "minetest.desktop",
 	"desktop-file-name-suffix": " (git)",
+	"rename-desktop-file": "net.minetest.minetest.desktop",
 	"rename-icon": "minetest",
+	"rename-appdata": "net.minetest.minetest.appdata.xml",
 	"finish-args": [
 		"--socket=x11",
 		"--socket=pulseaudio",
