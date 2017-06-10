@@ -67,8 +67,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/kcat/openal-soft/archive/openal-soft-1.17.2.tar.gz",
-					"sha256": "11ea176f6cbf9763dbce0953dd77ab72d032b4ad95f07afffb91844abb174033"
+					"url": "https://github.com/kcat/openal-soft/archive/openal-soft-1.18.0.tar.gz",
+					"sha256": "ad9095f0b9b62903f3a43e2c7df429a44d563aa0c93f7931338ab8fc4035b5c4"
 				},
 				{
 					"type": "file",
