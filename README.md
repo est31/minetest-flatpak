@@ -15,8 +15,8 @@ flatpak --user install gnome org.freedesktop.Platform 1.6
 Then, install the bundle file like:
 
 ```
-wget https://github.com/est31/minetest-flatpak/releases/download/v2.0/Minetest-0.4.15.flatpak
-flatpak install --user --bundle Minetest-0.4.15.flatpak
+wget https://github.com/est31/minetest-flatpak/releases/download/v2.0/Minetest-0.4.16.flatpak
+flatpak install --user --bundle Minetest-0.4.16.flatpak
 ```
 
 You can then invoke `flatpak run net.minetest.app` to run the build.
@@ -49,10 +49,10 @@ If you want, you can install the app to try it:
 flatpak --user install repo net.minetest.app
 ```
 
-Or you can extract the app from the repo and create a bundle file `Minetest-0.4.15.flatpak`:
+Or you can extract the app from the repo and create a bundle file `Minetest-0.4.16.flatpak`:
 
 ```
-flatpak build-bundle repo Minetest-0.4.15.flatpak net.minetest.app
+flatpak build-bundle repo Minetest-0.4.16.flatpak net.minetest.app
 
 ```
 
