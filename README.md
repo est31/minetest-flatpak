@@ -4,12 +4,12 @@ Minetest [flatpak](http://flatpak.org/) build files.
 
 ## Installation + Running
 
-First, get the Freedesktop platform 1.4:
+First, get the Freedesktop platform 1.6:
 
 ```
 wget https://sdk.gnome.org/keys/gnome-sdk.gpg
 flatpak remote-add --user --gpg-import=gnome-sdk.gpg gnome https://sdk.gnome.org/repo/
-flatpak --user install gnome org.freedesktop.Platform 1.4
+flatpak --user install gnome org.freedesktop.Platform 1.6
 ```
 
 Then, install the bundle file like:
@@ -24,14 +24,14 @@ You can then invoke `flatpak run net.minetest.app` to run the build.
 ## Build it yourself (Stable minetest)
 
 Similar to above, the first step is to get the Freedesktop platform
-(and the SDK) version 1.4:
+(and the SDK) version 1.6:
 
 
 ```
 wget https://sdk.gnome.org/keys/gnome-sdk.gpg
 flatpak remote-add --user --gpg-import=gnome-sdk.gpg gnome https://sdk.gnome.org/repo/
-flatpak --user install gnome org.freedesktop.Platform 1.4
-flatpak --user install gnome org.freedesktop.Sdk 1.4
+flatpak --user install gnome org.freedesktop.Platform 1.6
+flatpak --user install gnome org.freedesktop.Sdk 1.6
 
 ```
 
@@ -59,14 +59,14 @@ flatpak build-bundle repo Minetest-0.4.15.flatpak net.minetest.app
 ## Build it yourself (latest minetest from git)
 
 Similar to above, the first step is to get the Freedesktop platform
-(and the SDK) version 1.4:
+(and the SDK) version 1.6:
 
 
 ```
 wget https://sdk.gnome.org/keys/gnome-sdk.gpg
 flatpak remote-add --user --gpg-import=gnome-sdk.gpg gnome https://sdk.gnome.org/repo/
-flatpak --user install gnome org.freedesktop.Platform 1.4
-flatpak --user install gnome org.freedesktop.Sdk 1.4
+flatpak --user install gnome org.freedesktop.Platform 1.6
+flatpak --user install gnome org.freedesktop.Sdk 1.6
 
 ```
 

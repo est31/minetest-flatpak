@@ -2,7 +2,7 @@
 	"id": "net.minetest.app.git",
 	"version": "master",
 	"runtime": "org.freedesktop.Platform",
-	"runtime-version": "1.4",
+	"runtime-version": "1.6",
 	"sdk": "org.freedesktop.Sdk",
 	"command": "minetest",
 	"desktop-file-name-suffix": " (git)",
