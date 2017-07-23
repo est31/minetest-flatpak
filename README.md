@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This project is deprecated. Please use net.minetest.Minetest from [flathub](https://flathub.org) instead. For more, see [#9](https://github.com/est31/minetest-flatpak/issues/9).
+
 # Flatpak build files for minetest
 
 Minetest [flatpak](http://flatpak.org/) build files.
